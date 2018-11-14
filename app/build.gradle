@@ -64,4 +64,6 @@ dependencies {
     compile 'com.airbnb.android:lottie:2.1.0'
     // GreenGao
     compile 'org.greenrobot:greendao:3.2.2'
+    // 图片轮播
+    compile 'com.youth.banner:banner:1.4.10'
 }

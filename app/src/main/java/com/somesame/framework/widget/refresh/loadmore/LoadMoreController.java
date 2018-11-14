@@ -1,0 +1,34 @@
+package com.somesame.framework.widget.refresh.loadmore;
+
+import android.view.View;
+
+import com.somesame.framework.widget.refresh.ZRefreshLayout;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+/**
+ * [2017] by Zone
+ */
+
+public class LoadMoreController {
+    public static List<LoadMoreOtherListener> list = new ArrayList<>();
+
+    static {
+        list.add(new RecyclerViewLoadMoreListener());
+        list.add(new ListViewLoadMoreListener());
+    }
+
+    public static LoadMoreOtherListener addLoadMoreListener(View view, ZRefreshLayout zRefreshLayout) {
+        LoadMoreOtherListener result = null;
+        for (LoadMoreOtherListener loadMoreListener : list) {
+            if (loadMoreListener.instanceOf(view)) {
+                result = loadMoreListener.clone_();
+                result.addListener(view, zRefreshLayout);
+                break;
+            }
+        }
+        return result;
+    }
+}

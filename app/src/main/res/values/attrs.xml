@@ -11,11 +11,11 @@
         <attr name="timeoutView" format="reference" />
         <attr name="noDataView" format="reference" />
     </declare-styleable>
-    <style name="Theme_dialog" parent="@android:style/Theme.Dialog">
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowSoftInputMode">stateHidden|adjustPan</item>
-    </style>
+    <declare-styleable name="Banner">
+        <attr name="indicator_drawable_selected" format="reference" />
+        <attr name="indicator_drawable_unselected" format="reference" />
+        <attr name="image_scale_type" format="enum" />
+    </declare-styleable>
     <declare-styleable name="ClearEditText">
 
         <!-- 获取焦点标识 -->
