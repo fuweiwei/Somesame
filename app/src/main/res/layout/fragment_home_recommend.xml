@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    >
+    <com.somesame.somesame.widget.FrameLayout4Loading
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/rectangle_corner_gray"
+                android:layout_height="40dp">
+                <ImageView
+                    android:id="@+id/iv_search"
+                    android:layout_width="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30dp"
+                    android:src="@mipmap/ic_search"
+                    android:layout_height="15dp" />
+                <com.somesame.framework.widget.ClearEditText
+                    android:id="@+id/et_search"
+                    android:layout_toRightOf="@+id/iv_search"
+                    android:layout_width="match_parent"
+                    android:background="@null"
+                    android:lines="1"
+                    android:inputType="text"
+                    android:layout_marginRight="30dp"
+                    android:ellipsize="end"
+                    android:layout_height="match_parent" />
+            </RelativeLayout>
+            <com.somesame.framework.widget.autoscrollview.GrallyView
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                />
+        </LinearLayout>
+    </com.somesame.somesame.widget.FrameLayout4Loading>
+</LinearLayout>

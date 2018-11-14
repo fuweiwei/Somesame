@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="bar_text_red">
+        <item name="android:textColor">@color/text_color_red</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+    <style name="bar_text_gray">
+        <item name="android:textColor">@color/text_color_gary</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+    <style name="title_text_black">
+        <item name="android:textColor">@color/bid_black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+</resources>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            style="@style/title_text_black"
+            android:text="超次元"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:layout_marginRight="50dp"
+        android:layout_height="40dp">
+        <LinearLayout
+            android:id="@+id/lin_recommend"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_recommend"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_color_red"
+                android:textSize="16dp"
+                android:text="推荐"
+                android:layout_height="wrap_content" />
+            <View
+                android:id="@+id/view_recommend"
+                android:layout_width="30dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/text_color_red"
+                android:layout_height="2dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lin_friends"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_friends"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dp"
+                android:text="好友"
+                android:layout_height="wrap_content" />
+            <View
+                android:id="@+id/view_friends"
+                android:visibility="invisible"
+                android:layout_width="30dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/text_color_red"
+                android:layout_height="2dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lin_follow"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_follow"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dp"
+                android:text="关注"
+                android:layout_height="wrap_content" />
+            <View
+                android:id="@+id/view_follow"
+                android:visibility="invisible"
+                android:layout_width="30dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/text_color_red"
+                android:layout_height="2dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lin_new"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/tv_new"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_color_black"
+                android:textSize="16dp"
+                android:text="最新"
+                android:layout_height="wrap_content" />
+            <View
+                android:id="@+id/view_new"
+                android:visibility="invisible"
+                android:layout_width="30dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/text_color_red"
+                android:layout_height="2dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
+</LinearLayout>
