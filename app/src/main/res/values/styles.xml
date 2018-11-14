@@ -7,5 +7,16 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowAnimationStyle">@style/Window.Animation</item>
+        <item name="android:windowBackground">@color/background_color</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Window.Animation" mce_bogus="1" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/anim_window_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/anim_window_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/anim_window_close_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/anim_window_close_out</item>
+    </style>
 </resources>

@@ -1,6 +1,6 @@
-# RxJavaRetrofitMvp
+# Somesame
 ## 用途
-* 项目框架、项目初期搭建使用 
+* 二次元APP 
 ##使用框架和技术：、
 * RxJava  订阅模式（http://gank.io/post/560e15be2dca930e00da1083）<br> 
 * Retrofit 网络请求框架（https://blog.csdn.net/carson_ho/article/details/73732076）<br> 

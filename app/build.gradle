@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "27.0.3"
     defaultConfig {
-        applicationId "com.veer.rx"
+        applicationId "com.somesame.somesame"
         minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
@@ -24,7 +24,7 @@ android {
     }
     greendao {
         schemaVersion 1
-        daoPackage 'com.veer.rx.db.greendao'
+        daoPackage 'com.somesame.somesame.db.greendao'
         targetGenDir 'src/main/java'
     }
 

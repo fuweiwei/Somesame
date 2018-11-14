@@ -9,7 +9,7 @@
         <RelativeLayout
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/rectangle_corner_black"
+            android:background="@drawable/rectangle_corner_gray"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true">
             <ImageView

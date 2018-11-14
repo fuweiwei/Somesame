@@ -16,4 +16,12 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowSoftInputMode">stateHidden|adjustPan</item>
     </style>
+    <declare-styleable name="ClearEditText">
+
+        <!-- 获取焦点标识 -->
+        <attr name="entry_focus_tag" format="string" />
+        <!-- 失去焦点标识 -->
+        <attr name="leave_focus_tag" format="string" />
+
+    </declare-styleable>
 </resources>

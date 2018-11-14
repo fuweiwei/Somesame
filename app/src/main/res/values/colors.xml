@@ -4,10 +4,11 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="background_color_gray">#F5F5F5</color>
+    <color name="background_color">#F5F5F5</color>
 
     <color name="white">#ffffffff</color>
     <color name="black">#333333</color>
+    <color name="bid_black">#000000</color>
     <color name="red">#f76a53</color>
     <color name="red_home">#F45A5A</color>
     <color name="pink">#E31B1A</color>
@@ -22,22 +23,16 @@
     <color name="share_color_orange">#ffb600</color>
 
     <color name="text_color_green">#459606</color>
-    <color name="text_color_gary">#696969</color>
-    <color name="text_color_light_gary">#696969</color>
+    <color name="text_color_gary">#807E7E</color>
+    <color name="text_color_black">#333333</color>
     <color name="text_color_orange">#e76011</color>
-    <color name="text_color_bebebe">#bebebe</color>
-    <color name="text_color_666666">#666666</color>
-    <color name="text_color_red">#e31e1e</color>
-
+    <color name="text_color_red">#FB449F</color>
     <color name="light_gary">#bebebe</color>
 
     <color name="divider_color">#cccccc</color>
 
     <!-- 背景条按钮效果颜色 -->
     <color name="press_bar_color">#d8d8d8</color>
-
-    <!-- 取景器颜色值 -->
-    <color name="viewfinder_mask">#60000000</color>
     <!-- 导航栏背景色 -->
     <color name="title_bg">#1482de</color>
 
