@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.somesame.somesame">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.somesame.somesame">
 
     <application
         android:name="com.somesame.somesame.base.MyApplication"
@@ -9,8 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true" android:theme="@style/NoActionBar">
-        <activity android:name="com.somesame.somesame.ui.main.MainActivity"
-            android:windowSoftInputMode="stateHidden|adjustPan"
+        <activity android:name="com.somesame.somesame.ui.main.StartUpActivity"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,8 +19,17 @@
         </activity>
         <activity android:name="com.somesame.somesame.ui.banner.BannerActivity"
             />
-        <activity android:name="com.somesame.somesame.ui.book.BookActivity"
-           />
+        <activity android:name="com.somesame.somesame.ui.book.BookActivity"/>
+        <activity android:name=".ui.main.MainActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:launchMode="singleTask"/>
+        <activity android:name=".ui.main.mine.MyFansActivity"/>
+        <activity android:name=".ui.main.mine.MyFollowActivity"/>
+        <activity android:name=".ui.main.mine.EditMyInfoActivity" />
+        <activity android:name=".ui.main.mine.MyReleaseActivity" />
+        <activity android:name=".ui.main.mine.RechargeActivity" />
+        <activity android:name=".ui.main.msg.NoticeActivity"/>
+        <activity android:name=".ui.main.release.ReleaseActivity"/>
         <!--<activity android:name=".ui.main.MainActivity"-->
             <!--android:launchMode="singleTask"-->
             <!--/>-->

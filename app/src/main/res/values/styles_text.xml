@@ -14,5 +14,10 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">20dp</item>
     </style>
+    <style name="division_line">
+        <item name="android:background">@color/divider_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+    </style>
 
 </resources>

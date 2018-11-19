@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <com.somesame.somesame.widget.FrameLayout4Loading
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:layout_height="wrap_content">
+
+                    <com.somesame.framework.widget.CircleImageView
+                        android:layout_width="60dp"
+                        android:id="@+id/iv_face"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_face"
+                        android:layout_height="60dp" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="更换头像"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="18sp"
+                            android:layout_height="wrap_content" />
+
+                        <ImageView
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="wrap_content"
+                            android:src="@mipmap/ic_next_right"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="@dimen/margin_left"
+                    android:layout_marginRight="@dimen/margin_right"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textSize="18sp"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_color_black"
+                            android:text="更换昵称"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textSize="18sp"
+                            android:layout_weight="2"
+                            android:textColor="@color/text_color_black"
+                            android:text="Veer"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        style="@style/division_line"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textSize="18sp"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_color_black"
+                            android:text="超次元号"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textSize="18sp"
+                            android:layout_weight="2"
+                            android:textColor="@color/text_color_black"
+                            android:text="6666"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        style="@style/division_line"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textSize="18sp"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_color_black"
+                            android:text="性别"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textSize="18sp"
+                            android:layout_weight="2"
+                            android:textColor="@color/text_color_black"
+                            android:text="男"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        style="@style/division_line"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textSize="18sp"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_color_black"
+                            android:text="生日"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textSize="18sp"
+                            android:layout_weight="2"
+                            android:textColor="@color/text_color_black"
+                            android:text="1991-6-16"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        style="@style/division_line"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_height="40dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textSize="18sp"
+                            android:layout_weight="1"
+                            android:textColor="@color/text_color_black"
+                            android:text="个性签名"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:textSize="18sp"
+                            android:layout_weight="2"
+                            android:textColor="@color/text_color_black"
+                            android:text="风一样的男子"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_marginTop="5dp"
+                        style="@style/division_line"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/margin"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/bg_btn_red"
+                        android:text="动漫控"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:layout_height="30dp" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/bg_btn_red"
+                        android:text="手办收藏者"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"
+                        android:layout_height="30dp" />
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:background="@drawable/bg_btn_red"
+                        android:text="化妆晚会控"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="20dp"
+                        android:textColor="@color/white"
+                        android:layout_height="30dp" />
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </ScrollView>
+
+
+    </com.somesame.somesame.widget.FrameLayout4Loading>
+</LinearLayout>

@@ -15,6 +15,7 @@
             android:layout_centerInParent="true"
             android:layout_height="wrap_content" />
         <ImageView
+            android:id="@+id/iv_notice"
             android:layout_width="15dp"
             android:src="@mipmap/ic_notice"
             android:layout_alignParentRight="true"

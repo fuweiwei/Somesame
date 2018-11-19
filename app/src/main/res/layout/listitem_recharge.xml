@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipeLayout"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/bg_bank_red"
+        android:layout_margin="@dimen/margin"
+        android:layout_height="140dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:text="储蓄卡"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_toRightOf="@+id/tv_type"
+                android:layout_width="wrap_content"
+                android:text="（工商银行8888）"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_next_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="充值金额"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="100"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_marginRight="20dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:layout_height="0.5dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="确认"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

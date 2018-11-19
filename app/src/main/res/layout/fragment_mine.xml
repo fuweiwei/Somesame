@@ -54,7 +54,7 @@
                         android:textColor="@color/text_color_black"
                         android:textSize="14dp"
                         android:layout_marginTop="15dp"
-                        android:text="超次元号：8888"
+                        android:text="超次元号：6666"
                         android:layout_height="wrap_content" />
 
 
@@ -70,6 +70,7 @@
                         android:orientation="horizontal"
                         android:layout_height="wrap_content">
                         <LinearLayout
+                            android:id="@+id/lin_follow"
                             android:layout_width="match_parent"
                             android:orientation="vertical"
                             android:layout_weight="1"
@@ -90,6 +91,7 @@
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
                         <LinearLayout
+                            android:id="@+id/lin_fans"
                             android:layout_width="match_parent"
                             android:orientation="vertical"
                             android:layout_weight="1"
@@ -110,6 +112,7 @@
                                 android:layout_height="wrap_content" />
                         </LinearLayout>
                         <LinearLayout
+                            android:id="@+id/lin_zan"
                             android:layout_width="match_parent"
                             android:orientation="vertical"
                             android:layout_weight="1"
@@ -131,6 +134,7 @@
                         </LinearLayout>
                     </LinearLayout>
                     <Button
+                        android:id="@+id/btn_edit"
                         android:layout_width="100dp"
                         android:background="@drawable/btn_mine_red"
                         android:layout_marginTop="10dp"
@@ -161,6 +165,7 @@
                         android:layout_height="wrap_content" />
                 </LinearLayout>
                 <LinearLayout
+                    android:id="@+id/lin_release"
                     android:layout_width="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
@@ -178,6 +183,7 @@
                 android:layout_margin="15dp"
                 android:layout_height="200dp"/>
             <RelativeLayout
+                android:id="@+id/rel_recharge"
                 android:layout_width="match_parent"
                 android:background="@drawable/bg_white_selector"
                 android:layout_marginLeft="@dimen/margin_left"
@@ -190,6 +196,13 @@
                     android:layout_marginLeft="5dp"
                     android:layout_centerVertical="true"
                     android:text="我要充值"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:src="@mipmap/ic_next_right"
+                    android:layout_marginRight="5dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
             <RelativeLayout

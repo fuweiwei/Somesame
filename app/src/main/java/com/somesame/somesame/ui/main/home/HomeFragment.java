@@ -9,11 +9,14 @@ import android.support.v4.view.ViewPager;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.somesame.somesame.R;
 import com.somesame.somesame.base.BaseFragment;
+import com.somesame.somesame.common.ActivityContracts;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -53,7 +56,9 @@ public class HomeFragment extends BaseFragment<HomeContract.Presenter> implement
     LinearLayout linNew;
     @BindView(R.id.vp)
     ViewPager vp;
-    public static final int TAB1 = 0, TAB2 = 1,TAB3 = 2, TAB4 = 3;
+    public static final int TAB1 = 0, TAB2 = 1, TAB3 = 2, TAB4 = 3;
+    @BindView(R.id.iv_notice)
+    ImageView ivNotice;
     private FragmentStatePagerAdapter mAdapter;
     private final SparseArray<BaseFragment> mFragments = new SparseArray<BaseFragment>();
     private HomeRecommendFragment mHomeRecommendFragment;
@@ -82,10 +87,10 @@ public class HomeFragment extends BaseFragment<HomeContract.Presenter> implement
         mHomeFriendsFragment = new HomeFriendsFragment();
         mHomeFollowFragment = new HomeFollowFragment();
         mHomeNewFragment = new HomeNewFragment();
-        mFragments.put(TAB1,mHomeRecommendFragment);
-        mFragments.put(TAB2,mHomeFriendsFragment);
-        mFragments.put(TAB3,mHomeFollowFragment);
-        mFragments.put(TAB4,mHomeNewFragment);
+        mFragments.put(TAB1, mHomeRecommendFragment);
+        mFragments.put(TAB2, mHomeFriendsFragment);
+        mFragments.put(TAB3, mHomeFollowFragment);
+        mFragments.put(TAB4, mHomeNewFragment);
         mAdapter = new HomeTabAdapter(getChildFragmentManager());
         vp.setAdapter(mAdapter);
         vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -107,7 +112,8 @@ public class HomeFragment extends BaseFragment<HomeContract.Presenter> implement
         vp.setCurrentItem(TAB1);
 
     }
-    private void setBtn(int tag){
+
+    private void setBtn(int tag) {
         viewFollow.setVisibility(View.GONE);
         viewFriends.setVisibility(View.GONE);
         viewRecommend.setVisibility(View.GONE);
@@ -116,7 +122,7 @@ public class HomeFragment extends BaseFragment<HomeContract.Presenter> implement
         tvFollow.setTextColor(ContextCompat.getColor(mContext, R.color.text_color_black));
         tvFriends.setTextColor(ContextCompat.getColor(mContext, R.color.text_color_black));
         tvNew.setTextColor(ContextCompat.getColor(mContext, R.color.text_color_black));
-        switch (tag){
+        switch (tag) {
             case TAB1:
                 viewRecommend.setVisibility(View.VISIBLE);
                 tvRecommend.setTextColor(ContextCompat.getColor(mContext, R.color.text_color_red));
@@ -139,27 +145,37 @@ public class HomeFragment extends BaseFragment<HomeContract.Presenter> implement
     }
 
 
-    @OnClick({R.id.lin_recommend, R.id.lin_friends, R.id.lin_follow, R.id.lin_new})
+    @OnClick({R.id.lin_recommend, R.id.lin_friends, R.id.lin_follow, R.id.lin_new, R.id.iv_notice})
     public void onViewClicked(View view) {
-        int tag = (int) view.getTag();
+        int tag;
         switch (view.getId()) {
             case R.id.lin_recommend:
+                tag = (int) view.getTag();
                 vp.setCurrentItem(tag);
                 break;
             case R.id.lin_friends:
+                tag = (int) view.getTag();
                 vp.setCurrentItem(tag);
                 break;
             case R.id.lin_follow:
+                tag = (int) view.getTag();
                 vp.setCurrentItem(tag);
                 break;
             case R.id.lin_new:
+                tag = (int) view.getTag();
                 vp.setCurrentItem(tag);
                 break;
-                default:
-                    break;
+            case R.id.iv_notice:
+                ARouter.getInstance()
+                        .build(ActivityContracts.ACTIVITY_NOTICE)
+                        .navigation();
+                break;
+            default:
+                break;
         }
     }
-    private class HomeTabAdapter extends FragmentStatePagerAdapter{
+
+    private class HomeTabAdapter extends FragmentStatePagerAdapter {
 
         public HomeTabAdapter(FragmentManager fm) {
             super(fm);

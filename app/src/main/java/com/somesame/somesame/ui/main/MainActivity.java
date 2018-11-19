@@ -9,14 +9,17 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.somesame.somesame.R;
 import com.somesame.somesame.base.BaseActivity;
 import com.somesame.somesame.base.BaseFragment;
+import com.somesame.somesame.common.ActivityContracts;
 import com.somesame.somesame.ui.base.ToolBarType;
 import com.somesame.somesame.ui.main.home.HomeFragment;
-import com.somesame.somesame.ui.main.home.MineFragment;
-import com.somesame.somesame.ui.main.msg.MsgFragment;
 import com.somesame.somesame.ui.main.home.WorldFragment;
+import com.somesame.somesame.ui.main.mine.MineFragment;
+import com.somesame.somesame.ui.main.msg.MsgFragment;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -28,7 +31,7 @@ import butterknife.OnClick;
  * @email 276412667@qq.com
  * @date 18/11/12
  */
-
+@Route(path= ActivityContracts.ACTIVITY_MAIN)
 public class MainActivity extends BaseActivity<MainContract.Presenter> implements MainContract.View{
     @BindView(R.id.lin_bar_home)
     LinearLayout mLLayoutBarHome;
@@ -177,6 +180,12 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
     @OnClick(R.id.lin_bar_mine)
     public void onToMine(View view){
         setFragmentIndicator((Integer) view.getTag());
+    }
+    @OnClick(R.id.lin_bar_nav)
+    public void onToRelease(View view){
+        ARouter.getInstance()
+                .build(ActivityContracts.ACTIVITY_RELEASE)
+                .navigation();
     }
 
 }
