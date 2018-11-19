@@ -12,9 +12,10 @@ import android.widget.TextView;
 import com.somesame.somesame.R;
 import com.somesame.somesame.base.BaseActivity;
 import com.somesame.somesame.base.BaseFragment;
+import com.somesame.somesame.ui.base.ToolBarType;
 import com.somesame.somesame.ui.main.home.HomeFragment;
 import com.somesame.somesame.ui.main.home.MineFragment;
-import com.somesame.somesame.ui.main.home.MsgFragment;
+import com.somesame.somesame.ui.main.msg.MsgFragment;
 import com.somesame.somesame.ui.main.home.WorldFragment;
 
 import butterknife.BindView;
@@ -76,6 +77,11 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
     }
 
     @Override
+    protected ToolBarType getToolBarType() {
+        return ToolBarType.NO;
+    }
+
+    @Override
     protected MainContract.Presenter initPresenter() {
         return null;
     }
@@ -130,18 +136,26 @@ public class MainActivity extends BaseActivity<MainContract.Presenter> implement
         mTvMsg.setTextColor(ContextCompat.getColor(mContext, R.color.text_color_gary));
         mTvWorld.setTextColor(ContextCompat.getColor(mContext, R.color.text_color_gary));
         mTvMine.setTextColor(ContextCompat.getColor(mContext, R.color.text_color_gary));
+        mIvHome.setSelected(false);
+        mIvMsg.setSelected(false);
+        mIvWorld.setSelected(false);
+        mIvMine.setSelected(false);
         switch (tag) {
             case TAB_HOME:
                 mTvHome.setTextColor(ContextCompat.getColor(mContext, R.color.text_color_red));
+                mIvHome.setSelected(true);
                 break;
             case TAB_MSG:
                 mTvMsg.setTextColor(ContextCompat.getColor(mContext, R.color.text_color_red));
+                mIvMsg.setSelected(true);
                 break;
             case TAB_WORLD:
                 mTvWorld.setTextColor(ContextCompat.getColor(mContext, R.color.text_color_red));
+                mIvWorld.setSelected(true);
                 break;
             case TAB_MINE:
                 mTvMine.setTextColor(ContextCompat.getColor(mContext, R.color.text_color_red));
+                mIvMine.setSelected(true);
                 break;
             default:
                 break;

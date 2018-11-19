@@ -29,6 +29,7 @@ public abstract class BaseFragment<P extends BaseContract.BasePresenter> extends
     protected Context mContext;
     private Unbinder mUnBinder;
     protected P mPresenter;
+    protected  View mRootView;//缓存fragment view
 
     public final String TAG = getClass().getSimpleName();
 
@@ -58,6 +59,14 @@ public abstract class BaseFragment<P extends BaseContract.BasePresenter> extends
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
+//        if(mRootView == null){
+//            mRootView = inflater.inflate(getFragmentLayoutID(), container, false);
+//        }else{
+//            ViewGroup parent = (ViewGroup) mRootView.getParent();
+//            if (parent != null){
+//                parent.removeView(mRootView);
+//            }
+//        }
         mView = inflater.inflate(getFragmentLayoutID(), container, false);
         mActivity = getActivity();
         mContext = mActivity;

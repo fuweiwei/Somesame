@@ -2,11 +2,13 @@ package com.somesame.somesame.ui.main.home;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.SparseArray;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -52,7 +54,7 @@ public class HomeFragment extends BaseFragment<HomeContract.Presenter> implement
     @BindView(R.id.vp)
     ViewPager vp;
     public static final int TAB1 = 0, TAB2 = 1,TAB3 = 2, TAB4 = 3;
-    private FragmentPagerAdapter mAdapter;
+    private FragmentStatePagerAdapter mAdapter;
     private final SparseArray<BaseFragment> mFragments = new SparseArray<BaseFragment>();
     private HomeRecommendFragment mHomeRecommendFragment;
     private HomeFriendsFragment mHomeFriendsFragment;
@@ -84,17 +86,7 @@ public class HomeFragment extends BaseFragment<HomeContract.Presenter> implement
         mFragments.put(TAB2,mHomeFriendsFragment);
         mFragments.put(TAB3,mHomeFollowFragment);
         mFragments.put(TAB4,mHomeNewFragment);
-        mAdapter = new FragmentPagerAdapter(getChildFragmentManager()) {
-            @Override
-            public Fragment getItem(int position) {
-                return mFragments.get(position);
-            }
-
-            @Override
-            public int getCount() {
-                return mFragments.size();
-            }
-        };
+        mAdapter = new HomeTabAdapter(getChildFragmentManager());
         vp.setAdapter(mAdapter);
         vp.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -165,6 +157,37 @@ public class HomeFragment extends BaseFragment<HomeContract.Presenter> implement
                 break;
                 default:
                     break;
+        }
+    }
+    private class HomeTabAdapter extends FragmentStatePagerAdapter{
+
+        public HomeTabAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            return mFragments.get(position);
+        }
+
+        @Override
+        public int getCount() {
+            return mFragments.size();
+        }
+
+        @Override
+        public Object instantiateItem(ViewGroup container, int position) {
+            // 将实例化的fragment进行显示即可。
+            Fragment fragment = (Fragment) super.instantiateItem(container, position);
+            getChildFragmentManager().beginTransaction().show(fragment).commit();
+            return fragment;
+        }
+
+        @Override
+        public void destroyItem(ViewGroup container, int position, Object object) {
+//            super.destroyItem(container, position, object);
+            Fragment fragment = mFragments.get(position);// 获取要销毁的fragment
+            getChildFragmentManager().beginTransaction().hide(fragment).commit();// 将其隐藏即可，并不需要
         }
     }
 }

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <com.somesame.framework.widget.CircleImageView
+            android:layout_width="50dp"
+            android:src="@mipmap/ic_face"
+            android:layout_height="50dp" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="5dp"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="名称"
+            android:textSize="13dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/text_color_black"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="今天 20:30"
+            android:textSize="13dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/text_color_gary"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="是酒不好喝还是烟不好抽，偏要去碰感情！"
+        android:textColor="@color/text_color_black"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="18dp"
+                android:src="@mipmap/ic_msg"
+                android:layout_height="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="评论123"
+                android:textSize="13dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/text_color_black"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="18dp"
+                android:src="@mipmap/ic_zan"
+                android:layout_height="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="赞668"
+                android:textSize="13dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/text_color_black"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="18dp"
+                android:src="@mipmap/ic_forward"
+                android:layout_height="18dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="转发599"
+                android:textSize="13dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/text_color_black"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

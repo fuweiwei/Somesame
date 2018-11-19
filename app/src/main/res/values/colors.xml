@@ -2,17 +2,14 @@
 <resources>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FB449F</color>
 
     <color name="background_color">#F5F5F5</color>
 
     <color name="white">#ffffffff</color>
     <color name="black">#333333</color>
     <color name="bid_black">#000000</color>
-    <color name="red">#f76a53</color>
-    <color name="red_home">#F45A5A</color>
-    <color name="pink">#E31B1A</color>
-    <color name="pink1">#D33D3C</color>
+    <color name="red">#E9093E</color>
     <!-- <color name="background_color_gray">#e6e6e6</color> -->
     <color name="background_color_bright_white">#f8f8f8</color>
     <color name="dark_blue">#014da1</color>
@@ -53,8 +50,9 @@
     <color name="hr_gray_middle">#999999</color>
     <!--深灰颜色    产品期限，金额，文字标题-->
     <color name="hr_gray_Heavy">#333333</color>
-    <!--用于提示-->
-    <color name="hr_gray">#ABACAF</color>
+    <!--搜索框颜色-->
+    <color name="search_gray">#CBC9CA</color>
+    <color name="search_gray_light">#F2F0F1</color>
 
     <!--用于分割xian-->
     <color name="hr_gray_divi">#dddddd</color>
@@ -71,22 +69,8 @@
     <color name="hr_yellow_light">#ffca22</color>
     <color name="hr_yellow_safe_inspect">#ffea24</color>
 
-    <!-- 首页为您推荐字体颜色 -->
-    <color name="index_text_recommend">#868b90</color>
-    <!-- 首页list右上角文字颜色 -->
-    <color name="index_text_item_right_top">#f7a943</color>
-    <!-- 首页预期年化文字颜色 -->
-    <color name="index_text_item_left">#ff6633</color>
 
-    <color name="recommend_text">#480202</color>
 
     <color name="transparent">#0000</color>
-    <color name="province_line_border">#C7C7C7</color>
-    <color name="green">#7ED321</color>
-    <color name="bg_notice">#14F2B44E</color>
-    <color name="coupon_red">#C03107</color>
-    <color name="coupon_gray">#9B9B9B</color>
-    <color name="coupon_black">#000000</color>
-    <color name="coupon_orange">#FC4F08</color>
     <color name="btn_gray">#DFDFDF</color>
 </resources>

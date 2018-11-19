@@ -2,12 +2,234 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="com.somesame.somesame.ui.login.LoginActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    >
     <com.somesame.somesame.widget.FrameLayout4Loading
         android:id="@+id/loading"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_height">
+            <TextView
+                android:layout_width="wrap_content"
+                style="@style/title_text_black"
+                android:text="Veer"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content" />
 
+        </RelativeLayout>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="4"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content">
+                    <com.somesame.framework.widget.CircleImageView
+                        android:layout_width="60dp"
+                        android:src="@mipmap/ic_face"
+                        android:layout_height="60dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="14dp"
+                        android:layout_marginTop="15dp"
+                        android:text="超次元号：8888"
+                        android:layout_height="wrap_content" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_weight="2"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="14dp"
+                                android:layout_marginTop="10dp"
+                                android:text="12"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="14dp"
+                                android:layout_marginTop="10dp"
+                                android:text="关注"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="14dp"
+                                android:layout_marginTop="10dp"
+                                android:text="12.9万"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="14dp"
+                                android:layout_marginTop="10dp"
+                                android:text="粉丝"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="14dp"
+                                android:layout_marginTop="10dp"
+                                android:text="45.5万"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="14dp"
+                                android:layout_marginTop="10dp"
+                                android:text="点赞"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="100dp"
+                        android:background="@drawable/btn_mine_red"
+                        android:layout_marginTop="10dp"
+                        android:text="编辑"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="14dp"
+                        android:layout_height="30dp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"
+                android:background="@drawable/rectangle_corner_gray_light"
+                android:layout_height="30dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/rectangle_corner_gray"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="个性页面"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/text_color_gary"
+                        android:text="发布页面"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_margin="15dp"
+                android:layout_height="200dp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_white_selector"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginRight="@dimen/margin_right"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:text="我要充值"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_white_selector"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="@dimen/margin_right"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:text="昵      称：  风一样的男子"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/bg_white_selector"
+                android:layout_marginLeft="@dimen/margin_left"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="@dimen/margin_right"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="14dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerVertical="true"
+                    android:text="个性签名：  活得精彩"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+        </ScrollView>
+        </LinearLayout>
     </com.somesame.somesame.widget.FrameLayout4Loading>
 </RelativeLayout>

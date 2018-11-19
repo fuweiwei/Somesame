@@ -1,9 +1,10 @@
-package com.somesame.somesame.ui.main.home;
+package com.somesame.somesame.ui.main.msg;
 
 import android.os.Bundle;
 import android.view.View;
 
 import com.somesame.somesame.R;
+import com.somesame.somesame.base.BaseContract;
 import com.somesame.somesame.base.BaseFragment;
 
 /**
@@ -11,18 +12,20 @@ import com.somesame.somesame.base.BaseFragment;
  *
  * @author Veer
  * @email 276412667@qq.com
- * @date 18/11/13
+ * @date 18/11/15
  */
 
-public class MsgFragment extends BaseFragment<HomeContract.Presenter> implements HomeContract.View {
+public class ContactFragment extends BaseFragment {
+
+
     @Override
-    protected HomeContract.Presenter initPresenter() {
+    protected BaseContract.BasePresenter initPresenter() {
         return null;
     }
 
     @Override
     protected int getFragmentLayoutID() {
-        return R.layout.fragment_msg;
+        return R.layout.fragment_contact;
     }
 
     @Override

@@ -16,6 +16,12 @@
         <attr name="indicator_drawable_unselected" format="reference" />
         <attr name="image_scale_type" format="enum" />
     </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
     <declare-styleable name="ClearEditText">
 
         <!-- 获取焦点标识 -->

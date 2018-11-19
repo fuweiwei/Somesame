@@ -10,6 +10,7 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true" android:theme="@style/NoActionBar">
         <activity android:name="com.somesame.somesame.ui.main.MainActivity"
+            android:windowSoftInputMode="stateHidden|adjustPan"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

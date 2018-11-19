@@ -7,13 +7,20 @@
     >
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp">
+        android:layout_height="@dimen/title_height">
         <TextView
             android:layout_width="wrap_content"
             style="@style/title_text_black"
             android:text="超次元"
             android:layout_centerInParent="true"
             android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_width="15dp"
+            android:src="@mipmap/ic_notice"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_right"
+            android:layout_height="15dp" />
 
     </RelativeLayout>
     <LinearLayout
