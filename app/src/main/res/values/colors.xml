@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorPrimary">#FB449F</color>
+    <color name="colorPrimaryDark">#FB449F</color>
     <color name="colorAccent">#FB449F</color>
 
     <color name="background_color">#F5F5F5</color>
-
     <color name="white">#ffffffff</color>
     <color name="black">#333333</color>
     <color name="bid_black">#000000</color>
     <color name="red">#E9093E</color>
+    <color name="theme_red">#FB449F</color>
     <!-- <color name="background_color_gray">#e6e6e6</color> -->
     <color name="background_color_bright_white">#f8f8f8</color>
     <color name="dark_blue">#014da1</color>

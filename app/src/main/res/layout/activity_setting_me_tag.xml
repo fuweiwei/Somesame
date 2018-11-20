@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+    <com.somesame.somesame.widget.FrameLayout4Loading
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_width="wrap_content"
+                android:textColor="@color/text_color_black"
+                android:textSize="12sp"
+                android:layout_gravity="center_horizontal"
+                android:text="根据你的个性标签，我们会给您推送共同兴趣的小伙伴哦！"
+                android:layout_height="wrap_content" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/margin"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+        <Button
+            android:id="@+id/btn"
+            android:layout_marginTop="40dp"
+            android:layout_width="250dp"
+            android:background="@drawable/btn_mine_red"
+            android:text="下一步"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+    </com.somesame.somesame.widget.FrameLayout4Loading>
+</LinearLayout>

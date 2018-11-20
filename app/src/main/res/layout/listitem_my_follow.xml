@@ -42,7 +42,7 @@
         android:layout_centerVertical="true"
         android:text="已关注"
         android:textColor="@color/white"
-        android:background="@drawable/bg_btn_red"
+        android:background="@drawable/bg_btn_red_selector"
         android:layout_marginRight="@dimen/margin_right"
         android:layout_height="30dp">
 

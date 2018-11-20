@@ -24,4 +24,8 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowSoftInputMode">stateHidden|adjustPan</item>
     </style>
+    <style name="ImgSelectTheme" parent="@style/Matisse.Zhihu">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    </style>
 </resources>

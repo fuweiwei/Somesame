@@ -10,16 +10,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true" android:theme="@style/NoActionBar">
-        <activity android:name="com.somesame.somesame.ui.main.StartUpActivity"
+        <activity android:name=".ui.main.StartUpActivity"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.somesame.somesame.ui.banner.BannerActivity"
+        <activity android:name=".ui.banner.BannerActivity"
             />
-        <activity android:name="com.somesame.somesame.ui.book.BookActivity"/>
+        <activity android:name=".ui.book.BookActivity"/>
         <activity android:name=".ui.main.MainActivity"
             android:windowSoftInputMode="stateHidden|adjustPan"
             android:launchMode="singleTask"/>
@@ -30,9 +30,24 @@
         <activity android:name=".ui.main.mine.RechargeActivity" />
         <activity android:name=".ui.main.msg.NoticeActivity"/>
         <activity android:name=".ui.main.release.ReleaseActivity"/>
+        <activity android:name=".ui.login.RegisterActivity"/>
+        <activity android:name=".ui.me.SettingMyInfoActivity"/>
+        <activity android:name=".ui.me.SettingMyTagActivity"/>
         <!--<activity android:name=".ui.main.MainActivity"-->
             <!--android:launchMode="singleTask"-->
             <!--/>-->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.somesame.somesame.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 </manifest>

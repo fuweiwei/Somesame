@@ -9,6 +9,7 @@ android {
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
@@ -23,6 +24,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            multiDexEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -43,7 +45,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:recyclerview-v7:26.1.0'
     compile 'com.android.support:design:26.1.0'
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
     //Retrofit
     compile 'com.squareup.retrofit2:retrofit:2.4.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
@@ -74,4 +75,6 @@ dependencies {
     //AndroidSwipeLayout 侧滑
     compile "com.daimajia.swipelayout:library:1.2.0@aar"
     compile 'com.android.support:support-v4:26.0.1'
+    //matisse  知乎图片选择框架
+    compile 'com.zhihu.android:matisse:0.4.3'
 }
