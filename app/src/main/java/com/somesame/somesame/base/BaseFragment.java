@@ -1,9 +1,9 @@
 package com.somesame.somesame.base;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +25,7 @@ import butterknife.Unbinder;
 public abstract class BaseFragment<P extends BaseContract.BasePresenter> extends RxFragment implements BaseContract.BaseView {
     private static final String STATE_SAVE_IS_HIDDEN = "STATE_SAVE_IS_HIDDEN";
     protected View mView;
-    protected Activity mActivity;
+    protected FragmentActivity mActivity;
     protected Context mContext;
     private Unbinder mUnBinder;
     protected P mPresenter;

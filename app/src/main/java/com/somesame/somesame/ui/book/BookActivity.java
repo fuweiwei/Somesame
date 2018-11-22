@@ -8,6 +8,7 @@ import com.somesame.somesame.R;
 import com.somesame.somesame.base.BaseActivity;
 import com.somesame.somesame.common.ActivityContracts;
 import com.somesame.somesame.model.BookModel;
+import com.somesame.somesame.ui.common.ShareDialog;
 import com.somesame.somesame.widget.FrameLayout4Loading;
 
 import butterknife.BindView;
@@ -35,7 +36,8 @@ public class BookActivity extends BaseActivity<BookPresenter> implements BookCon
         mBaseToolBar.setToolbarImgRight(R.mipmap.ic_share, new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                ShareDialog dialog = new ShareDialog();
+                dialog.showAllowingStateLoss(mContext);
             }
         });
     }

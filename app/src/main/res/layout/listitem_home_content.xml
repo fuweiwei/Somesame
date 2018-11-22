@@ -97,6 +97,7 @@
                 android:layout_height="wrap_content" />
         </LinearLayout>
         <LinearLayout
+            android:id="@+id/lin_forward"
             android:layout_width="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"

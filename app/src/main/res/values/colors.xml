@@ -53,6 +53,7 @@
     <!--搜索框颜色-->
     <color name="search_gray">#CBC9CA</color>
     <color name="search_gray_light">#F2F0F1</color>
+    <color name="bg_share">#F0E9E9</color>
 
     <!--用于分割xian-->
     <color name="hr_gray_divi">#dddddd</color>

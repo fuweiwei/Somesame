@@ -24,6 +24,12 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowSoftInputMode">stateHidden|adjustPan</item>
     </style>
+    <style name="Show_SoftInput_Theme_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
     <style name="ImgSelectTheme" parent="@style/Matisse.Zhihu">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>

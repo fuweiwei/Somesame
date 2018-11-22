@@ -1,9 +1,9 @@
 package com.somesame.somesame.base;
 
-import android.app.Activity;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.view.View;
 import android.view.Window;
@@ -31,7 +31,7 @@ import butterknife.Unbinder;
  */
 
 public abstract class BaseActivity<P extends BaseContract.BasePresenter> extends RxAppCompatActivity implements BaseContract.BaseView {
-    protected Activity mContext;
+    protected FragmentActivity mContext;
     protected P mPresenter;
     private Unbinder mUnBinder;
     private ProgressDialog mDialog;

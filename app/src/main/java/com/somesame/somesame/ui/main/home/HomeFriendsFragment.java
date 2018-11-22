@@ -40,7 +40,7 @@ public class HomeFriendsFragment extends BaseFragment<HomeRecommendContract.Pres
     @Override
     protected void initView(View view, Bundle savedInstanceState) {
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL));
-        recyclerView.setAdapter(new StaggeredListAdapter(mContext,10));
+        recyclerView.setAdapter(new StaggeredListAdapter(mActivity,10));
         zRefreshLayout.setIHeaderView(new SinaRefreshHeader());
         zRefreshLayout.setPinHeader(false);
         zRefreshLayout.setIFooterView(new LoadFooter());

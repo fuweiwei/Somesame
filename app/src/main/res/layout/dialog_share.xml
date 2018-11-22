@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:background="@drawable/bg_share_dialog"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/lin_qq"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="50dp"
+                android:src="@mipmap/ic_qq"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lin_wx"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="50dp"
+                android:src="@mipmap/ic_wx"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/lin_friends"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="50dp"
+                android:src="@mipmap/ic_friends"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lin_cancle"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/margin_left"
+        android:layout_marginRight="@dimen/margin_right"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:background="@drawable/bg_share_dialog"
+        android:layout_marginBottom="10dp"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="取消"
+            android:textSize="18sp"
+            android:textColor="@color/text_color_black"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>
