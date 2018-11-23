@@ -15,4 +15,8 @@
 * Banner 图片轮播框架 https://github.com/youth5201314/banner <br>
 * ZRefreshLayout 下拉刷新上拉加载控件  <br>
 * Matisse 知乎的图片选择框架  https://github.com/zhihu/Matisse
+* 效果图
+![图片](https://github.com/fuweiwei/Somesame/blob/master/img_readme/%E8%B6%85%E6%AC%A1%E5%85%83-%E9%A6%96%E9%A1%B5.png)
+![图片](https://github.com/fuweiwei/Somesame/blob/master/img_readme/%E8%B6%85%E6%AC%A1%E5%85%83-%E9%A6%96%E9%A1%B5%E5%A5%BD%E5%8F%8B.png)
+![图片](https://github.com/fuweiwei/Somesame/blob/master/img_readme/%E8%B6%85%E6%AC%A1%E5%85%83-%E9%A6%96%E9%A1%B5%E6%B2%A1%E6%9C%89%E5%85%B3%E6%B3%A8.png)
 ![图片](https://github.com/fuweiwei/Somesame/blob/master/img_readme/%E8%B6%85%E6%AC%A1%E5%85%83-%E4%BB%96%E4%BA%BA%E8%AF%A6%E6%83%85%E9%A1%B5.png)
