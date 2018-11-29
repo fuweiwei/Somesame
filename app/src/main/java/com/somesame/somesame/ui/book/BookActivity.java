@@ -4,6 +4,7 @@ package com.somesame.somesame.ui.book;
 import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
+import com.somesame.framework.widget.ijkplayer.VideoPlayerIJK;
 import com.somesame.somesame.R;
 import com.somesame.somesame.base.BaseActivity;
 import com.somesame.somesame.common.ActivityContracts;
@@ -12,6 +13,8 @@ import com.somesame.somesame.ui.common.ShareDialog;
 import com.somesame.somesame.widget.FrameLayout4Loading;
 
 import butterknife.BindView;
+import tv.danmaku.ijk.media.player.IMediaPlayer;
+import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 
 /**
  * 描述
@@ -24,6 +27,8 @@ import butterknife.BindView;
 public class BookActivity extends BaseActivity<BookPresenter> implements BookContract.View{
     @BindView(R.id.loading)
     FrameLayout4Loading mFrameLayout4Loading;
+    @BindView(R.id.video)
+    VideoPlayerIJK videoPlayerIJK;
 
     @Override
     public void setBook(BookModel model) {
@@ -40,6 +45,50 @@ public class BookActivity extends BaseActivity<BookPresenter> implements BookCon
                 dialog.showAllowingStateLoss(mContext);
             }
         });
+        try {
+            IjkMediaPlayer.loadLibrariesOnce(null);
+            IjkMediaPlayer.native_profileBegin("libijkplayer.so");
+        } catch (Exception e) {
+            this.finish();
+        }
+        videoPlayerIJK.setListener(new VideoPlayerIJK.VideoPlayerListener() {
+            @Override
+            public void onVideoSizeChanged(IMediaPlayer iMediaPlayer, int i, int i1, int i2, int i3) {
+
+            }
+
+            @Override
+            public void onSeekComplete(IMediaPlayer iMediaPlayer) {
+
+            }
+
+            @Override
+            public void onPrepared(IMediaPlayer iMediaPlayer) {
+                iMediaPlayer.start();
+            }
+
+            @Override
+            public boolean onInfo(IMediaPlayer iMediaPlayer, int i, int i1) {
+                return false;
+            }
+
+            @Override
+            public boolean onError(IMediaPlayer iMediaPlayer, int i, int i1) {
+                return false;
+            }
+
+            @Override
+            public void onCompletion(IMediaPlayer iMediaPlayer) {
+
+            }
+
+            @Override
+            public void onBufferingUpdate(IMediaPlayer iMediaPlayer, int i) {
+
+            }
+        });
+        videoPlayerIJK.setVideoPath("https://oimryzjfe.qnssl.com/content/1F3D7F815F2C6870FB512B8CA2C3D2C1.mp4");
+
     }
 
     @Override

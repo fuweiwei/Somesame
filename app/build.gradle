@@ -28,6 +28,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            //设置so文件夹目录
+            jniLibs.srcDirs = ['libs']
+        }
+    }
     greendao {
         schemaVersion 1
         daoPackage 'com.somesame.somesame.db.greendao'
@@ -35,7 +41,11 @@ android {
     }
 
 }
-
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
@@ -77,4 +87,7 @@ dependencies {
     compile 'com.android.support:support-v4:26.0.1'
     //matisse  知乎图片选择框架
     compile 'com.zhihu.android:matisse:0.4.3'
+    //ijkplayer  音频播放框架
+    compile 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+
 }

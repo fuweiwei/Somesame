@@ -75,10 +75,16 @@
                         android:textColor="@color/text_color_black"
                         android:text="如果你无法简洁的表达你的想法，那只说明你还不够了解它 \n --阿尔伯特   爱因斯坦 "
                         android:layout_height="wrap_content" />
+                    <com.somesame.framework.widget.ijkplayer.VideoPlayerIJK
+                        android:id="@+id/video"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+                    </com.somesame.framework.widget.ijkplayer.VideoPlayerIJK>
                     <ImageView
                         android:layout_width="match_parent"
                         android:src="@mipmap/ic_face2"
                         android:scaleType="centerCrop"
+                        android:visibility="gone"
                         android:layout_marginRight="@dimen/margin_right"
                         android:layout_marginLeft="@dimen/margin_left"
                         android:layout_height="300dp" />
