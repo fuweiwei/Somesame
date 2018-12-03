@@ -78,6 +78,7 @@
                     <com.somesame.framework.widget.ijkplayer.VideoPlayerIJK
                         android:id="@+id/video"
                         android:layout_width="match_parent"
+                        android:layout_marginTop="100dp"
                         android:layout_height="200dp">
                     </com.somesame.framework.widget.ijkplayer.VideoPlayerIJK>
                     <ImageView
