@@ -1,13 +1,15 @@
 package com.somesame.framework.widget.ijkplayer;
 
 import android.content.Context;
+import android.graphics.SurfaceTexture;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.Gravity;
+import android.view.Surface;
 import android.view.SurfaceHolder;
-import android.view.SurfaceView;
+import android.view.TextureView;
 import android.widget.FrameLayout;
 
 import java.io.IOException;
@@ -32,7 +34,9 @@ public class VideoPlayerIJK extends FrameLayout {
      */
     private String mPath = "";
 
-    private SurfaceView mSurfaceView;
+//    private SurfaceView mSurfaceView;  SurfaceView不受主线程滑动有黑边
+    private TextureView mTextureView;
+    private Surface mSurface;
     private Context mContext;
     private VideoPlayerListener listener;
 
@@ -80,12 +84,37 @@ public class VideoPlayerIJK extends FrameLayout {
      */
     private void createSurfaceView() {
         //生成一个新的surface view
-        mSurfaceView = new SurfaceView(mContext);
-        mSurfaceView.getHolder().addCallback(new LmnSurfaceCallback());
+//        mSurfaceView = new SurfaceView(mContext);
+//        mSurfaceView.getHolder().addCallback(new LmnSurfaceCallback());
         LayoutParams layoutParams = new LayoutParams(LayoutParams.MATCH_PARENT
                 , LayoutParams.MATCH_PARENT, Gravity.CENTER);
-        mSurfaceView.setLayoutParams(layoutParams);
-        this.addView(mSurfaceView);
+//        mSurfaceView.setLayoutParams(layoutParams);
+
+        mTextureView = new TextureView(mContext);
+        mTextureView.setSurfaceTextureListener(new TextureView.SurfaceTextureListener() {
+            @Override
+            public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
+                mSurface = new Surface(surface);
+                load();
+            }
+
+            @Override
+            public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
+                load();
+            }
+
+            @Override
+            public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
+                return false;
+            }
+
+            @Override
+            public void onSurfaceTextureUpdated(SurfaceTexture surface) {
+
+            }
+        });
+        mTextureView.setLayoutParams(layoutParams);
+        this.addView(mTextureView);
     }
     /**
      * surfaceView的监听器
@@ -117,7 +146,8 @@ public class VideoPlayerIJK extends FrameLayout {
             e.printStackTrace();
         }
         //给mediaPlayer设置视图
-        mIMediaPlayer.setDisplay(mSurfaceView.getHolder());
+//        mIMediaPlayer.setDisplay(mSurfaceView.getHolder());
+        mIMediaPlayer.setSurface(mSurface);
 
         mIMediaPlayer.prepareAsync();
     }
