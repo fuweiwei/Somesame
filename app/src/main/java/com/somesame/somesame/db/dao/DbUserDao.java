@@ -13,7 +13,7 @@ import java.util.List;
  */
 
 public class DbUserDao extends DbDao {
-    private static DbUserDao mDbUserDao;
+    private volatile static  DbUserDao mDbUserDao;
     private  UserDao mUserDao;
 
     private DbUserDao() {

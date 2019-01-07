@@ -11,7 +11,7 @@ import com.somesame.somesame.db.greendao.BookDao;
  */
 
 public class DbBookDao extends DbDao {
-    private static DbBookDao mDbBookDao;
+    private volatile static DbBookDao mDbBookDao;
     private BookDao mBookDao;
 
     private DbBookDao(){
